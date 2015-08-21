@@ -1,5 +1,3 @@
+require "slash3d/configuration"
+require "slash3d/iframe"
 require "slash3d/version"
-
-module Slash3d
-  # Your code goes here...
-end
