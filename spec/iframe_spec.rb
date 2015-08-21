@@ -9,10 +9,10 @@ module Slash3D
 
     describe "#url" do
       before do
-        allow(SecureRandom).to receive(:hex) { "c97ff01cdf0fca07a33dce9" }
+        allow(iframe).to receive(:content_id) { "c97ff01cdf0fca07a33dce9" }
       end
 
-      it "returns an url" do
+      it "returns a full url to 3dslash" do
         url = "https://www.3dslash.net/slash.php" \
               "?content=c97ff01cdf0fca07a33dce9" \
               "&partner=test_partner_code" \
@@ -21,6 +21,24 @@ module Slash3D
               "&src=http%3A%2F%2Fsource-url"
 
         expect(iframe.url).to eq(url)
+      end
+    end
+
+    describe "#content_id" do
+      it "generates a random hex" do
+        expect(iframe.content_id).to match(/^[0-9a-f]{10,256}$/)
+      end
+
+      it "is memoized" do
+        expect(iframe.content_id).to eq(iframe.content_id)
+      end
+
+      context "when given in the options" do
+        let(:options) { { content_id: "f00" } }
+
+        it "returns the same value" do
+          expect(iframe.content_id).to eq("f00")
+        end
       end
     end
   end

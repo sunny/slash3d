@@ -21,7 +21,7 @@ module Slash3D
         content: content_id,
         src: source,
         redirect: redirect_url,
-        sign: signature
+        sign: signature,
       }
 
       "https://www.3dslash.net/slash.php?" + parameters.to_query
@@ -35,7 +35,7 @@ module Slash3D
         Slash3D.configuration.partner_code,
         content_id,
         source,
-        redirect_url
+        redirect_url,
       ]
 
       Digest::SHA256.hexdigest(signature_values.join('|'))

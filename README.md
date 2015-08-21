@@ -23,21 +23,56 @@ Slash3D.configure do |c|
 end
 ```
 
+You should get the partner code and API key by asking 3D Slash.
+
 
 Usage
 -----
+
+### Get an Iframe url
 
 ```rb
 iframe = Slash3D::Iframe.new(
   source: <url of stl or 3d slash id>,
   redirect_url: <your url>,
-
-  # optional
-  content_id: <unique id, no more than 255 chars>,
 )
 
 iframe.url #=> "https://www.3dslash.net/slash.php?…"
-iframe.content_id #=> 42
+iframe.content_id #=> "4c5fd2b2aa423d430f22ba940f4e28f7060fc39b2e44…"
+```
+
+You can then use it in your page:
+
+```html
+<iframe frameborder="0" src="<%= iframe.url %>"></iframe>
+```
+
+### Handle the POST
+
+Once the user has clicked "export", a `POST` request will be sent to the
+`redirect_url` you have given.
+
+To get URLs from these parameters, pass them to a `Response`:
+
+```rb
+response = Slash3D::Response.new(params)
+response.stl_url # => "https://www.3dslash.net/…"
+response.thumbnail_url # => "https://www.3dslash.net/…"
+response.slash3d_url # => "https://www.3dslash.net/…"
+response.url # => "https://www.3dslash.net/…"
+```
+
+You can specify a thumbnail size (defaults to 192x192):
+
+```rb
+response.thumbnail_url(width: 42, height: 42) # => "https://www.3dslash.net/…"
+```
+
+You can store this model's uid to use it as a `source` the next time
+you make an `Iframe`.
+
+```rb
+response.uid # => "d430f22ba940f4e28f7060…"
 ```
 
 
