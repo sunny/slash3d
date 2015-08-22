@@ -1,5 +1,5 @@
-Ruby gem to access 3D Slash's API
-=================================
+Ruby gem to access [3D Slash](https://www.3dslash.net/)'s API
+=============================================================
 
 Here be dragons
 ---------------
