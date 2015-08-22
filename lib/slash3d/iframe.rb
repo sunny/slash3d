@@ -38,7 +38,7 @@ module Slash3D
         redirect_url,
       ]
 
-      Digest::SHA256.hexdigest(signature_values.join('|'))
+      Digest::SHA256.hexdigest(signature_values.join("|"))
     end
 
     attr_reader :source, :redirect_url

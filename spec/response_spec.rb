@@ -4,10 +4,10 @@ require "slash3d/response"
 module Slash3D
   describe Response do
     let(:response) { described_class.new(params) }
-    let(:params) { { content: 'f004221',
-                     dslashUID: 'b484221',
-                     api: 'https://api.3dslash.net/',
-                     nonce: 'e4f57b89' } }
+    let(:params) { { content: "f004221",
+                     dslashUID: "b484221",
+                     api: "https://api.3dslash.net/",
+                     nonce: "e4f57b89" } }
 
     describe "#stl_url" do
       it "returns a full url to 3dslash" do

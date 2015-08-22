@@ -13,7 +13,7 @@ Installation
 Add this line to your application's Gemfile:
 
 ```rb
-gem 'slash3d', github: 'sunny/slash3d'
+gem "slash3d", github: "sunny/slash3d"
 ```
 
 And then execute:
@@ -28,8 +28,8 @@ Configuration
 
 ```rb
 Slash3D.configure do |c|
-  c.partner_code = 'foobar'
-  c.api_key = 'd4he4fae262352e4…'
+  c.partner_code = "foobar"
+  c.api_key = "d4he4fae262352e4…"
 end
 ```
 

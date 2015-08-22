@@ -1,15 +1,15 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'slash3d/version'
+require "slash3d/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "slash3d"
   spec.version       = Slash3D::VERSION
   spec.authors       = ["Sunny Ripert"]
   spec.email         = ["sunny@sunfox.org"]
-  spec.summary       = %q{Access 3D Slash's API}
-  # spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Access 3D Slash's API"
+  # spec.description   = "TODO: Write a longer description. Optional."
   spec.homepage      = ""
   spec.license       = "MIT"
 

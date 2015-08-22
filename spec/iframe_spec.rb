@@ -4,8 +4,8 @@ require "slash3d/iframe"
 module Slash3D
   describe Iframe do
     let(:iframe) { described_class.new(options) }
-    let(:options) { { source: 'http://source-url',
-                      redirect_url: 'http://redirect-url' } }
+    let(:options) { { source: "http://source-url",
+                      redirect_url: "http://redirect-url" } }
 
     describe "#url" do
       before do

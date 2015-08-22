@@ -13,19 +13,19 @@ module Slash3D
     end
 
     def stl_url
-      action_url('stl')
+      action_url("stl")
     end
 
     def thumbnail_url(width: nil, height: nil)
-      action_url('thumbnail', width: width, height: height)
+      action_url("thumbnail", width: width, height: height)
     end
 
     def slash3d_url
-      action_url('3dslash')
+      action_url("3dslash")
     end
 
     def url
-      action_url('url')
+      action_url("url")
     end
 
 
@@ -57,7 +57,7 @@ module Slash3D
         action,
       ]
 
-      Digest::SHA256.hexdigest(signature_values.join('|'))
+      Digest::SHA256.hexdigest(signature_values.join("|"))
     end
   end
 end
