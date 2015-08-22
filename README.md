@@ -1,16 +1,26 @@
 Ruby gem to access 3D Slash's API
 =================================
 
+Here be dragons
+---------------
+
+This gem has not yet been tested in production. But it works. Probably.
+
+
 Installation
 ------------
 
 Add this line to your application's Gemfile:
 
-    gem 'slash3d'
+```rb
+gem 'slash3d', github: 'sunny/slash3d'
+```
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 
 Configuration
