@@ -2,6 +2,7 @@ require "active_support/core_ext/object/to_query"
 require "securerandom"
 
 module Slash3D
+  # Represent an Iframe to build a model with 3D Slash
   class Iframe
     def initialize(content_id: nil,
                    source: nil,

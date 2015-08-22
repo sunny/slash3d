@@ -2,6 +2,7 @@ require "active_support/core_ext/object/to_query"
 require "securerandom"
 
 module Slash3D
+  # Parse a 3D Slash POST response and extract URLs to the new model
   class Response
     attr_reader :content
 

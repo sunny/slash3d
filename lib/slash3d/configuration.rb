@@ -1,4 +1,5 @@
 module Slash3D
+  # Global configuration options
   class Configuration
     attr_accessor :api_key
     attr_accessor :partner_code
