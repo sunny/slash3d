@@ -13,7 +13,7 @@ Installation
 Add this line to your application's Gemfile:
 
 ```rb
-gem "slash3d", github: "sunny/slash3d"
+gem "slash3d"
 ```
 
 And then execute:
