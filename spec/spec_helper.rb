@@ -1,4 +1,4 @@
-# require "webmock/rspec"
+require "webmock/rspec"
 
 require "slash3d/configuration"
 

@@ -61,8 +61,8 @@ module Slash3D
       end
     end
 
-    describe "#url" do
-      it "returns a full url to 3dslash" do
+    describe "#permanent_url" do
+      it "returns the permanent url to a 3dslash creation" do
         url = "https://api.3dslash.net/" \
               "?action=url" \
               "&alias=b484221" \
@@ -70,7 +70,10 @@ module Slash3D
               "&partner=test_partner_code" \
               "&sign=f3b529b43c4591de2f33049f7cd572f3faa024f43c0e75aef357b87daa5db2ca"
 
-        expect(response.url).to eq(url)
+        stub_request(:get, url)
+          .to_return(body: "https://foo.com")
+
+        expect(response.permanent_url).to eq("https://foo.com")
       end
     end
   end

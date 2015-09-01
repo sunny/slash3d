@@ -66,13 +66,23 @@ To get URLs from these parameters, pass them to a `Response`:
 
 ```rb
 response = Slash3D::Response.new(params)
+```
+
+You can get temporary URLs:
+
+```rb
 response.stl_url # => "https://www.3dslash.net/…"
 response.thumbnail_url # => "https://www.3dslash.net/…"
 response.slash3d_url # => "https://www.3dslash.net/…"
-response.url # => "https://www.3dslash.net/…"
 ```
 
-You can specify a thumbnail size (defaults to 192x192):
+And the full URL to the creation:
+
+```rb
+response.permanent_url # => "https://www.3dslash.net/…"
+```
+
+For thumbnails you can specify size (defaults to 192x192):
 
 ```rb
 response.thumbnail_url(width: 42, height: 42) # => "https://www.3dslash.net/…"

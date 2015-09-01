@@ -1,5 +1,6 @@
 require "active_support/core_ext/object/to_query"
 require "securerandom"
+require "net/http"
 
 module Slash3D
   # Parse a 3D Slash POST response and extract URLs to the new model
@@ -25,8 +26,9 @@ module Slash3D
       action_url("3dslash")
     end
 
-    def url
-      action_url("url")
+    def permanent_url
+      url = URI.parse(action_url("url"))
+      Net::HTTP.get_response(url).body
     end
 
 
