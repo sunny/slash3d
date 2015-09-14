@@ -45,6 +45,7 @@ Usage
 iframe = Slash3D::Iframe.new(
   source: <url of stl or 3d slash id>,
   redirect_url: <your url>,
+  lang: 'en',
 )
 
 iframe.url #=> "https://www.3dslash.net/slash.php?…"
