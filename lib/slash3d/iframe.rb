@@ -31,6 +31,7 @@ module Slash3D
         redirect: redirect_url,
         sign: signature,
         lang: lang_number,
+        parent: 1,
       }
 
       "https://www.3dslash.net/slash.php?" + parameters.to_query
