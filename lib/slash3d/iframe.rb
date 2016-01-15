@@ -40,7 +40,7 @@ module Slash3D
     private
 
     def lang_number
-      LANGUAGES.fetch(lang || 'en')
+      LANGUAGES[lang] || 'en'
     end
 
     def signature
