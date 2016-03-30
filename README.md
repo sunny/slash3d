@@ -1,12 +1,6 @@
 Ruby gem to access [3D Slash](https://www.3dslash.net/)'s API
 =============================================================
 
-Here be dragons
----------------
-
-This gem has not yet been tested in production. But it works. Probably.
-
-
 Installation
 ------------
 
@@ -39,7 +33,7 @@ You should get the partner code and API key by asking 3D Slash.
 Usage
 -----
 
-### Get an Iframe url
+### Get an iframe url
 
 ```rb
 iframe = Slash3D::Iframe.new(
