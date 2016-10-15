@@ -4,9 +4,10 @@ Ruby gem to access [3D Slash](https://www.3dslash.net/)'s API
 Installation
 ------------
 
-Add this line to your application's Gemfile:
+Add these lines to your application's Gemfile:
 
 ```rb
+# Client for 3DSlash.net's API
 gem "slash3d"
 ```
 
